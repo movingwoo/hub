@@ -13,5 +13,4 @@ Thumbs.db
 # Local env
 .env
 .env.local
-.cursorignore
 .claude/settings.local.json

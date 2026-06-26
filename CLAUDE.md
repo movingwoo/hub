@@ -6,7 +6,7 @@ GitHub Pages로 배포되는 정적 웹페이지. 빌드 도구 없이 HTML/CSS/
 
 ### index.html — 시작 화면
 - Guest 버튼: 클릭 시 `links.html`로 이동
-- Admin 버튼: 추후 연결 예정, 현재 동작 없음
+- Admin 버튼: 고민 중
 
 ### links.html — 링크 목록 화면
 - `js/content.js`의 데이터를 `js/render.js`가 읽어 DOM을 동적으로 렌더링
@@ -22,7 +22,8 @@ GitHub Pages로 배포되는 정적 웹페이지. 빌드 도구 없이 HTML/CSS/
 │   └── style.css       # 전체 공용 스타일 (다크 테마)
 ├── js/
 │   ├── content.js      # 콘텐츠 데이터 (제목·소개문·링크 목록)
-│   └── render.js       # links.html DOM 동적 렌더링
+│   ├── render.js       # links.html DOM 동적 렌더링
+│   └── animate.js      # 버튼·카드 hover/press 효과, 페이지 로드 스태거 애니메이션
 └── images/             # 링크 썸네일 이미지 업로드 폴더
 ```
 
@@ -53,14 +54,6 @@ const SITE_CONTENT = {
 
 - 다크 테마: 배경 `#0f172a`, 카드 `#1e293b`, 텍스트 `#e5e7eb`
 - 모든 색상은 `css/style.css` 한 파일에서 관리
-
-## 배포 (GitHub Pages)
-
-- 저장소 이름이 `사용자명.github.io`이면 main 브랜치 푸시만으로 자동 배포
-- 일반 저장소 이름이면 최초 1회 Settings → Pages → 브랜치/루트 지정 필요
-- 이후는 커밋·푸시만 하면 자동 반영
-
-## 로컬 테스트
 
 ```bash
 python3 -m http.server 8000

@@ -44,6 +44,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: #fff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .btn-guest {
@@ -97,7 +98,7 @@ body {
   border-radius: 10px;
   text-decoration: none;
   color: inherit;
-  transition: box-shadow 0.15s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .link-item:hover {
@@ -128,4 +129,16 @@ body {
 .link-desc {
   flex: 1;
   font-size: 0.95rem;
+}
+
+/* 페이지 로드 애니메이션 */
+.anim-hidden {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }

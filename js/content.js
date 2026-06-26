@@ -3,23 +3,18 @@
 // 이미지를 이 저장소의 images/ 폴더에 올렸다면 "images/파일명.jpg" 형태로,
 // 다른 곳에 올렸다면 해당 이미지의 전체 URL을 그대로 적으면 됩니다.
 const SITE_CONTENT = {
-  title: "제목을 입력하세요",
-  intro: "여기에 간단한 소개문을 작성합니다. 이 페이지에서 소개할 링크들을 아래에 나열하세요.",
+  title: "MOVINGWOO HUB",
+  intro: "공개 서비스 중인 페이지 허브",
   links: [
     {
-      image: "images/photo1.jpg",
-      desc: "링크 설명 1",
-      url: "https://example.com/link1"
+      image: "images/arc_icon.png",
+      desc: "작업 기록 및 학습 내용에 대한 통합 아카이브",
+      url: "https://arc.movingwoo.com/"
     },
     {
-      image: "",
-      desc: "링크 설명 2",
-      url: "https://example.com/link2"
-    },
-    {
-      image: "",
-      desc: "링크 설명 3",
-      url: "https://example.com/link3"
+      image: "images/github_icon.png",
+      desc: "깃허브",
+      url: "https://github.com/movingwoo/"
     }
   ]
 };
