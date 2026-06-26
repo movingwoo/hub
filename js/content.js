@@ -7,12 +7,12 @@ const SITE_CONTENT = {
   intro: "공개 서비스 중인 페이지 허브",
   links: [
     {
-      image: "images/arc_icon.png",
+      image: "https://raw.githubusercontent.com/movingwoo/hub/refs/heads/main/images/arc_icon.png",
       desc: "작업 기록 및 학습 내용에 대한 통합 아카이브",
       url: "https://arc.movingwoo.com/"
     },
     {
-      image: "images/github_icon.png",
+      image: "https://raw.githubusercontent.com/movingwoo/hub/refs/heads/main/images/github_icon.png",
       desc: "깃허브",
       url: "https://github.com/movingwoo/"
     }
