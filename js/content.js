@@ -12,6 +12,11 @@ const SITE_CONTENT = {
       url: "https://arc.movingwoo.com/"
     },
     {
+      image: "https://raw.githubusercontent.com/movingwoo/hub/refs/heads/main/images/wtools_icon.png",
+      desc: "브라우저 개발자 도구",
+      url: "https://wtools.movingwoo.com/"
+    },
+    {
       image: "https://raw.githubusercontent.com/movingwoo/hub/refs/heads/main/images/github_icon.png",
       desc: "깃허브",
       url: "https://github.com/movingwoo/"
