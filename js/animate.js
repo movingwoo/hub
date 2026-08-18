@@ -20,6 +20,15 @@
     });
   }
 
+  function addMasterButtonAlert() {
+    var masterButton = document.getElementById('master-button');
+    if (masterButton) {
+      masterButton.addEventListener('click', function () {
+        alert('공사 중');
+      });
+    }
+  }
+
   function addLinkCardEffects() {
     document.querySelectorAll('.link-item').forEach(function (card) {
       card.addEventListener('mouseenter', function () {
@@ -60,6 +69,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     addButtonEffects();
+    addMasterButtonAlert();
     addLinkCardEffects();
     addPageLoadAnimation();
   });
