@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta name="google-adsense-account" content="ca-pub-8013591620292891">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>movingwoo hub</title>
+<title>MOVINGWOO HUB</title>
+<meta name="description" content="movingwoo가 운영중인 서비스와 개인 프로젝트 저장소를 한곳에 모아둔 허브.">
+<link rel="canonical" href="https://movingwoo.com/">
+
+<!-- 공유 미리보기 (카톡·슬랙·디스코드 등) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MOVINGWOO HUB">
+<meta property="og:title" content="MOVINGWOO HUB">
+<meta property="og:description" content="운영중인 서비스와 개인 프로젝트 저장소를 한곳에.">
+<meta property="og:url" content="https://movingwoo.com/">
+<meta property="og:image" content="https://movingwoo.com/images/arc_icon.png">
+<meta property="og:image:width" content="180">
+<meta property="og:image:height" content="180">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MOVINGWOO HUB">
+<meta name="twitter:description" content="운영중인 서비스와 개인 프로젝트 저장소를 한곳에.">
+<meta name="twitter:image" content="https://movingwoo.com/images/arc_icon.png">
+
+<link rel="icon" type="image/png" href="/images/arc_icon.png">
+<link rel="apple-touch-icon" href="/images/arc_icon.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="start-screen">
-    <h1>MOVINGWOO HUB</h1>
-    <div class="button-group">
-      <a href="links.html" class="btn btn-guest">Guest</a>
-      <button type="button" class="btn btn-admin" id="master-button">Master</button>
-    </div>
-  </div>
+  <main class="page">
+    <header>
+      <h1 id="page-title"></h1>
+      <p id="page-intro"></p>
+    </header>
+
+    <div class="link-list" id="link-list"></div>
+
+    <section class="section" id="others-section" hidden>
+      <hr class="section-divider">
+      <h2 class="section-title" id="others-title"></h2>
+      <div class="link-list" id="others-list"></div>
+    </section>
+  </main>
+
+  <script src="js/content.js"></script>
+  <script src="js/render.js"></script>
   <script src="js/animate.js"></script>
 </body>
 </html>

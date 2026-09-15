@@ -14,3 +14,7 @@ Thumbs.db
 .env
 .env.local
 .claude/settings.local.json
+
+# Claude Code 프로젝트 메모 (로컬 전용)
+CLAUDE.md
+.claude/

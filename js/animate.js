@@ -1,53 +1,10 @@
 (function () {
-  function addButtonEffects() {
-    document.querySelectorAll('.btn').forEach(function (btn) {
-      btn.addEventListener('mouseenter', function () {
-        btn.style.transform = 'scale(1.05) translateY(-2px)';
-        btn.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.35)';
-      });
-      btn.addEventListener('mouseleave', function () {
-        btn.style.transform = '';
-        btn.style.boxShadow = '';
-      });
-      btn.addEventListener('mousedown', function () {
-        btn.style.transform = 'scale(0.97) translateY(0)';
-        btn.style.boxShadow = '';
-      });
-      btn.addEventListener('mouseup', function () {
-        btn.style.transform = 'scale(1.05) translateY(-2px)';
-        btn.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.35)';
-      });
-    });
-  }
+  // hover / press 효과는 css/style.css의 :hover, :active가 담당한다.
+  // 이 파일은 페이지 로드 시 스태거 등장 애니메이션만 처리한다.
 
-  function addMasterButtonAlert() {
-    var masterButton = document.getElementById('master-button');
-    if (masterButton) {
-      masterButton.addEventListener('click', function () {
-        alert('공사 중');
-      });
-    }
-  }
-
-  function addLinkCardEffects() {
-    document.querySelectorAll('.link-item').forEach(function (card) {
-      card.addEventListener('mouseenter', function () {
-        card.style.transform = 'translateY(-4px)';
-        card.style.borderColor = '#3b82f6';
-        card.style.boxShadow = '0 8px 28px rgba(0, 0, 0, 0.45)';
-      });
-      card.addEventListener('mouseleave', function () {
-        card.style.transform = '';
-        card.style.borderColor = '';
-        card.style.boxShadow = '';
-      });
-      card.addEventListener('mousedown', function () {
-        card.style.transform = 'translateY(-1px)';
-      });
-      card.addEventListener('mouseup', function () {
-        card.style.transform = 'translateY(-4px)';
-      });
-    });
+  function prefersReducedMotion() {
+    return !!(window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   }
 
   function addPageLoadAnimation() {
@@ -68,9 +25,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    addButtonEffects();
-    addMasterButtonAlert();
-    addLinkCardEffects();
+    // 움직임 최소화 설정이면 숨겼다 보여주는 과정 자체를 건너뛴다.
+    if (prefersReducedMotion()) {
+      return;
+    }
     addPageLoadAnimation();
   });
 })();
